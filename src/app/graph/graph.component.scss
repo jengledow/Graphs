@@ -1,0 +1,33 @@
+@import '../../styles.scss';
+
+.listItem {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+    height: 20px;
+
+    .vertLabel {
+        font-size: 20px;
+        width: 5%;
+        text-align: right;
+    }
+
+    svg {
+        &:hover {
+            cursor: pointer;
+            fill: mat-color($primaryPalette);
+        }
+        margin-left: 2%;
+    }
+
+    .edgeContainer {
+        display: flex;
+        padding: 5px;
+        align-items: center;
+
+        p {
+            margin: 5px;
+        }
+    }
+}

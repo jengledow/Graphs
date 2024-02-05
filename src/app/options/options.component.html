@@ -1,0 +1,18 @@
+<div>
+    <mat-button-toggle-group [disabled]="true" name="weight" aria-label="Weighting" (change)="setWeighted($event)" value="true">
+        <mat-button-toggle value="true">Weighted</mat-button-toggle>
+        <mat-button-toggle value="false">Unweighted</mat-button-toggle>
+    </mat-button-toggle-group>
+
+    <mat-button-toggle-group [disabled]="true" name="directed" aria-label="Directed" (change)="setDirected($event)" value="false">
+        <mat-button-toggle value="true">Directed</mat-button-toggle>
+        <mat-button-toggle value="false">Undirected</mat-button-toggle>
+    </mat-button-toggle-group>
+
+    <mat-button-toggle-group [disabled]="disabled" name="inputType" aria-label="Input Type" (change)="setList($event)" value="false">
+        <mat-button-toggle value="true">Adjacency List</mat-button-toggle>
+        <mat-button-toggle value="false">Adjacency Matrix</mat-button-toggle>
+    </mat-button-toggle-group>
+</div>
+
+<app-graph [weighted]="weighted" [directed]="directed" [list]="list"></app-graph>
